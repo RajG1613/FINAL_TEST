@@ -8,3 +8,6 @@ pandas
 requests
 xlrd
 openpyxl
+gunicorn
+flask   
+
