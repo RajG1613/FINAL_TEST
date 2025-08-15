@@ -10,12 +10,12 @@ from data_insights import insights_from_excel
 from github_push import push_files_to_github
 from db import init_db, save_history
 
-app = FastAPI(title="AI Modernizer Platform", version="0.1.0")
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], allow_credentials=True,
-    allow_methods=["*"], allow_headers=["*"],
+    allow_origins=["https://final-test-4-ik91.onrender.com"],  # Replace with your actual frontend domain
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 # ---------- Models ----------
@@ -136,3 +136,4 @@ def github_push(req: GitPushRequest):
 if __name__ == "__main__":
     init_db()
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
