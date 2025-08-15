@@ -10,4 +10,5 @@ xlrd
 openpyxl
 gunicorn
 flask   
+python-multipart
 
