@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+openai>=1.35.0
+groq
+python-dotenv
+pandas
+requests
+xlrd
+openpyxl
