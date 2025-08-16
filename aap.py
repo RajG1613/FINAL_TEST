@@ -12,6 +12,10 @@ from db import init_db, save_history
 
 app = FastAPI(title="AI Modernizer Platform", version="0.1.0")
 
+@app.get("/")
+def root():
+    return {"AI Mordrnisation Platform is running"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], allow_credentials=True,
@@ -136,6 +140,7 @@ def github_push(req: GitPushRequest):
 if __name__ == "__main__":
     init_db()
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
 
 
